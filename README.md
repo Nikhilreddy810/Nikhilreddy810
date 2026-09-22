@@ -1,19 +1,19 @@
-﻿<div align="center">
+<div align="center">
 
 ```text
-â–ˆâ–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—â–ˆâ–ˆâ•—â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—â–ˆâ–ˆâ•—  â–ˆâ–ˆâ•—â–ˆâ–ˆâ•—â–ˆâ–ˆâ•—     â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•—   â–ˆâ–ˆâ•—
-â–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘ //  â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•â•â•â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â•šâ–ˆâ–ˆâ•— â–ˆâ–ˆâ•”â•
-â–ˆâ–ˆâ•”â–ˆâ–ˆâ•— â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—  â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘ â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•”â• 
-â–ˆâ–ˆâ•‘â•šâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•”â•â–ˆâ–ˆâ•— â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘     â–ˆâ–ˆâ•”â•â•â–ˆâ–ˆâ•—â–ˆâ–ˆâ•”â•â•â•  â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘  â•šâ–ˆâ–ˆâ•”â•  
-â–ˆâ–ˆâ•‘ â•šâ–ˆâ–ˆâ–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ•‘  â–ˆâ–ˆâ•‘â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•—â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ•”â•   â–ˆâ–ˆâ•‘   
-â•šâ•â•  â•šâ•â•â•â•â•šâ•â•â•šâ•â•  â•šâ•â•â•šâ•â•  â•šâ•â•â•šâ•â•â•šâ•â•â•â•â•â•â•â•šâ•â•  â•šâ•â•â•šâ•â•â•â•â•â•â•â•šâ•â•â•â•â•â• â•šâ•â•â•â•â•â•    â•šâ•â•   
+███╗   ██╗██╗██╗  ██╗██╗  ██╗██╗██╗     ██████╗ ███████╗██████╗ ██████╗ ██╗   ██╗
+████╗  ██║██║██║ //  ██║  ██║██║██║     ██╔══██╗██╔════╝██╔══██╗██╔══██╗╚██╗ ██╔╝
+██╔██╗ ██║██║█████╗  ███████║██║██║     ██████╔╝█████╗  ██║  ██║██║  ██║ ╚████╔╝ 
+██║╚██╗██║██║██╔═██╗ ██╔══██║██║██║     ██╔══██╗██╔══╝  ██║  ██║██║  ██║  ╚██╔╝  
+██║ ╚████║██║██║  ██╗██║  ██║██║███████╗██║  ██║███████╗██████╔╝██████╔╝   ██║   
+╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═════╝ ╚═════╝    ╚═╝   
 ```
 
 # Nikhil Reddy Levaku
 
-### Java Backend Developer â€¢ Distributed Systems â€¢ Spring Boot Architecture
+### Java Backend Developer • Distributed Systems • Spring Boot Architecture
 
-`Tirupati, India` â€¢ [Portfolio](https://nikhilreddy810.github.io/portfolio/) â€¢ [LinkedIn](https://linkedin.com) â€¢ [Email](mailto:levakunikhilreddy8@gmail.com)
+`Tirupati, India` • [Portfolio](https://nikhilreddy810.github.io/portfolio/) • [LinkedIn](https://linkedin.com) • [Email](mailto:levakunikhilreddy8@gmail.com)
 
 </div>
 
@@ -25,10 +25,10 @@ I build high-concurrency backend services, transactional workflows, and distribu
 
 Currently focused on:
 
-- **DeepLure Research** â€” Shipping 100+ production REST APIs across B2B & on-demand service platforms
-- **High Concurrency & Database Scale** â€” Idempotency keys, optimistic/pessimistic locking, and Redis caching cutting DB load ~40%
-- **Upcoming Engineering Tenures** â€” Java Developer Intern at Axlero Solutions & Associate L1 at Infotact Solutions
-- **Algorithms & Problem Solving** â€” 100+ Data Structures & Algorithms problems solved on LeetCode
+- **DeepLure Research** — Shipping 100+ production REST APIs across B2B & on-demand service platforms
+- **High Concurrency & Database Scale** — Idempotency keys, optimistic/pessimistic locking, and Redis caching cutting DB load ~40%
+- **Upcoming Engineering Tenures** — Java Developer Intern at Axlero Solutions & Associate L1 at Infotact Solutions
+- **Algorithms & Problem Solving** — 100+ Data Structures & Algorithms problems solved on LeetCode
 
 My goal is to architect scalable, resilient backend infrastructure powering millions of transactional requests.
 
@@ -135,13 +135,13 @@ End-to-end Spring Boot backend for Learning Management System built at Ratan Tat
 ## / connect
 
 ```text
-Portfolio  â†’ https://nikhilreddy810.github.io/portfolio/
+Portfolio  → https://nikhilreddy810.github.io/portfolio/
 
-LinkedIn   â†’ https://linkedin.com
+LinkedIn   → https://linkedin.com
 
-GitHub     â†’ https://github.com/Nikhilreddy810
+GitHub     → https://github.com/Nikhilreddy810
 
-Email      â†’ levakunikhilreddy8@gmail.com
+Email      → levakunikhilreddy8@gmail.com
 ```
 
 ---

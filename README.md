@@ -1,201 +1,192 @@
 # Nikhil Reddy Levaku
 
-**Java Backend Developer • Distributed Systems • Spring Boot**
+**Java Backend Engineer • Distributed Systems • High-Concurrency Architecture**
 
-Building reliable backend systems, APIs, and scalable infrastructure.
+Building resilient backend microservices, transactional workflows, and distributed infrastructure with Core Java, Spring Boot, PostgreSQL, and Redis.
 
 [Portfolio](https://nikhilreddy810.github.io/portfolio/) &nbsp;•&nbsp; [LinkedIn](https://www.linkedin.com/in/nikhilreddylevaku/) &nbsp;•&nbsp; [Email](mailto:levakunikhilreddy8@gmail.com) &nbsp;•&nbsp; [Resume](https://nikhilreddy810.github.io/portfolio/resume.pdf)
 
 ---
 
-## / engineering
+## / engineering-specs
 
-```
-┌── Backend Engineering ────────────────────────────────────────────────────────┐
-│ Java • Spring Boot • REST APIs • JPA/Hibernate • Spring Security (JWT/RBAC)   │
-└── Concurrency, transactional consistency, and idempotent service workflows ────┘
-
-┌── Distributed Systems ────────────────────────────────────────────────────────┐
-│ Redis (Caching & Queues) • Row-level Locking • Idempotency • Distributed Sync │
-└── Cache eviction patterns, query optimization, and latency reduction ─────────┘
-
-┌── Cloud & DevOps ─────────────────────────────────────────────────────────────┐
-│ Linux • Docker • AWS • Git • CI/CD Pipelines • Flyway Database Migrations    │
-└── Containerized runtime, isolated environments, and structured build workflows ┘
-
-┌── Architecture ───────────────────────────────────────────────────────────────┐
-│ Layered Architecture • Microservices • Database Normalization • System Design │
-└── Controller-Service-Repository patterns with centralized exception handling ──┘
+```java
+public record SystemArchitect(
+    String engineer,
+    String primaryDomain,
+    List<String> coreStack,
+    List<String> concurrencyPatterns
+) {
+    public static final SystemArchitect PROFILE = new SystemArchitect(
+        "Nikhil Reddy Levaku",
+        "High-Throughput Backend & Distributed Transactions",
+        List.of("Java 17/21", "Spring Boot 3.x", "PostgreSQL", "Redis", "Docker"),
+        List.of("Idempotent API Design", "Pessimistic & Optimistic Locking", "ACID Rollbacks", "Redis Worker Queues")
+    );
+}
 ```
 
----
-
-## / currently-building
-
 ```
-backend
-   │
-   ▼
-microservices ──► [Service Discovery & Distributed Config]
-   │
-   ▼
-messaging     ──► [Apache Kafka Event Streaming]
-   │
-   ▼
-containers    ──► [Docker & Multi-stage Builds]
-   │
-   ▼
-cloud         ──► [AWS Core Infrastructure]
-   │
-   ▼
-orchestration ──► [Kubernetes Deployments & Ingress]
-   │
-   ▼
-system design ──► [High Availability & CAP Trade-offs]
+┌── Backend Systems ─────────────────────────────────────────────────────────────┐
+│ Java (17/21) • Spring Boot 3.x • REST APIs • Spring Security (JWT/RBAC)        │
+│ Layered architecture (Controller → Service → Repository), DTO validation       │
+└────────────────────────────────────────────────────────────────────────────────┘
+
+┌── Data & Distributed State ────────────────────────────────────────────────────┐
+│ PostgreSQL • MySQL • Redis (In-Memory Cache & Asynchronous Workers) • Flyway   │
+│ Optimistic/pessimistic row locking, 40% DB load reduction, transactional isolation ┘
+└────────────────────────────────────────────────────────────────────────────────┘
+
+┌── Cloud, DevOps & Quality ─────────────────────────────────────────────────────┐
+│ Docker • AWS (EC2, S3, RDS) • Linux • Git & CI/CD • JUnit 5 • Mockito • OpenAPI│
+│ Multi-stage container builds, automated unit/integration testing, Swagger UI   │
+└────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## / featured-projects
+## / system-architecture-patterns
 
-### Flight Booking System
-
-`Spring Boot` • `Java` • `MySQL` • `Redis` • `Docker` • `REST API`
-
-A distributed backend booking engine with transactional workflows, pessimistic seat allocation, and zero-inventory-drift guarantees under concurrent traffic.
-
-- **Problem solved:** Eliminates overbooking and race conditions during simultaneous flight seat reservations.
-- **Engineering focus:** Pessimistic write locking (`Isolation.SERIALIZABLE`), Redis idempotency key validation with TTL, transactional rollback on cancellation, and layered architecture (Controller → Service → Repository).
-
-→ [Repository](https://github.com/Nikhilreddy810/Flight_Booking)
-
----
-
-### User Management System
-
-`Spring Boot` • `Java` • `Hibernate/JPA` • `MySQL` • `Postman`
-
-An enterprise-grade identity and user CRUD service with dynamic search criteria, robust payload validation, and centralized exception handling.
-
-- **Problem solved:** Provides clean, decoupled identity management with normalized database schemas.
-- **Engineering focus:** 6-table normalized relational schema, JPA relationship mappings, pagination and filtering, and comprehensive Postman collection coverage.
-
-→ [Repository](https://github.com/Nikhilreddy810/User_Management)
-
----
-
-### Production B2B Services & Async Engine (DeepLure)
-
-`Java 21` • `Spring Boot 3.x` • `PostgreSQL` • `Redis` • `Razorpay` • `Docker`
-
-Production microservices architecture powering multi-tenant order fulfillment, payment verification, and asynchronous event workers.
-
-- **Problem solved:** Handles high-volume marketplace transactions and notifications without database query degradation.
-- **Engineering focus:** Shipped 100+ production REST APIs, integrated Razorpay idempotency guards, and engineered Redis background queues that reduced database load by ~40%.
-
----
-
-## / architecture
-
-A high-level view of the transactional concurrency model in the **Flight Booking System**:
+### Distributed Concurrency & Idempotency Pipeline
 
 ```
-[ Client / HTTP Request ]
-           │
-           ▼
-[ Spring Boot REST Controller ] ── (JWT Auth & DTO Validation)
-           │
-           ▼
-[ Service Layer (@Transactional) ]
-     │                 │
-     ▼                 ▼
-[ Redis Template ]  [ MySQL Database ]
-  • Idempotency       • Pessimistic Row Lock (PESSIMISTIC_WRITE)
-  • 15m Cache TTL     • Atomic Seat Status Commit / Rollback
+[ Client / Webhook ] ──( HTTPS + JWT Token )──> [ Spring Boot API Gateway ]
+                                                       │
+                                  ┌────────────────────┴────────────────────┐
+                                  ▼                                         ▼
+                      [ Request Idempotency Key ]               [ Hibernate / JPA Entity ]
+                      • Redis GET/SETNX with TTL                • Optimistic versioning check (@Version)
+                      • Prevents duplicate mutations            • Pessimistic write lock (PESSIMISTIC_WRITE)
+                                  │                                         │
+                                  └────────────────────┬────────────────────┘
+                                                       ▼
+                                      [ @Transactional Execution Block ]
+                                      • Atomic balance & seat status mutations
+                                      • Automatic rollback on runtime exception
+                                                       │
+                                  ┌────────────────────┴────────────────────┐
+                                  ▼                                         ▼
+                      [ Redis Cache Layer ]                     [ Relational Storage ]
+                      • Evict / invalidate stale cache          • PostgreSQL / MySQL commit
+                      • Push notification event to Redis queue  • Flyway schema version sync
 ```
 
 ---
 
-## / engineering-experience
+## / deep-dive-projects
 
-### Backend Engineering — DeepLure Research (May 2026 – Present)
-- Engineered and shipped **100+ production REST APIs** across B2B marketplace and on-demand services.
-- Implemented secure authentication and authorization using **stateless JWT tokens and RBAC**, with OTP verification delivered over SMS and email.
-- Integrated **Razorpay payment gateway** with strict idempotency keys and locking primitives to prevent double-charges and race conditions.
-- Built **Redis-backed asynchronous workers** for notification delivery, payment reconciliation, and booking expiration, cutting database query load by **~40%**.
-- Modeled normalized PostgreSQL schemas using **Hibernate/JPA and versioned Flyway migrations**.
+### ✈️ Flight Booking System — Distributed Reservation Engine
+`Spring Boot` • `Java` • `MySQL` • `Redis` • `Docker` • `Swagger OpenAPI` • [View Repository](https://github.com/Nikhilreddy810/Flight_Booking)
 
-### Data Analytics — SmartBridge / APSCHE (May 2025 – Jul 2025)
-- Cleaned and transformed manufacturing and sales datasets utilizing structured **multi-table SQL joins** and aggregate queries.
-- Engineered **3 interactive Tableau dashboards** for operational inventory tracking and production bottleneck analysis.
+- **The Problem:** Simultaneous user bookings during flash sales cause seat race conditions, dirty reads, and inventory drift.
+- **Architecture Solution:** 
+  - Implemented **concurrency-safe seat allocation with pessimistic row locks** (`PESSIMISTIC_WRITE`) preventing multiple threads from booking the same seat inventory.
+  - Wrapped booking and payment workflows inside `@Transactional` boundaries with **declarative rollback**, ensuring atomic recovery if payment or confirmation fails.
+  - Layered **Redis caching** for high-frequency flight search endpoints with automatic TTL invalidation, minimizing repetitive database query overhead.
+  - Containerized with **Docker** and fully documented with **Swagger UI / OpenAPI 3.0**.
+
+### 💼 Production Microservices & Payment Guardrails — DeepLure Research
+`Java 21` • `Spring Boot 3.x` • `PostgreSQL` • `Redis` • `Docker` • `Razorpay`
+
+- **The Problem:** B2B marketplaces face double-billing risks on network retries and database bottlenecks from polling notifications.
+- **Architecture Solution:**
+  - Designed and delivered **100+ production REST APIs** across authentication, multi-tenant catalog, ordering, and partner modules.
+  - Integrated **Razorpay payment webhooks with idempotency keys**, eliminating race conditions and preventing duplicate debits across concurrent requests.
+  - Engineered **Redis-backed asynchronous worker queues** for order expiry and notification dispatch, reducing database query load by **~40%**.
+  - Built real-time customer and provider chat over **WebSocket / STOMP** paired with Firebase Cloud Messaging (FCM).
+  - Maintained schema integrity with **Flyway migrations** and authored automated test suites with **JUnit 5 and Mockito**.
+
+### 👤 Identity & User Management Microservice
+`Spring Boot` • `Hibernate / JPA` • `MySQL` • `Postman` • [View Repository](https://github.com/Nikhilreddy810/User_Management)
+
+- **The Problem:** Enterprise services require normalized entity graphs with dynamic filtering without triggering N+1 query problems.
+- **Architecture Solution:**
+  - Designed a normalized 6-table relational MySQL schema with bidirectional JPA entity mappings.
+  - Implemented dynamic multi-field search with parameter validation and centralized exception handling conforming to RFC-7807 problem details.
+  - Published and verified complete testing workflows with comprehensive Postman collections.
 
 ---
 
-## / tech-stack
+## / technical-matrix
 
-```
-Backend        │ Java (17/21), Spring Boot, Spring Security (JWT/RBAC), Hibernate/JPA, REST APIs
-Databases      │ MySQL, PostgreSQL, Redis (Caching & Asynchronous Queues)
-Cloud & DevOps │ Linux, Docker, AWS, Git, CI/CD Pipelines, Flyway Migrations
-Tooling        │ Maven, Gradle, Postman, Swagger/OpenAPI, JUnit 5, Mockito
-```
+| Domain | Technologies, Standards & Tools |
+| :--- | :--- |
+| **Backend & Core** | `Java (17, 21)`, `Core Java (OOP, Streams, Concurrency, Generics)`, `SQL`, `RESTful Design` |
+| **Frameworks** | `Spring Boot 3.x`, `Spring Security (JWT, RBAC, OAuth2/OTP)`, `Spring Data JPA`, `Hibernate ORM` |
+| **Databases & Caching** | `PostgreSQL`, `MySQL`, `Redis (Cache-Aside, Distributed Queues, Pub/Sub)`, `Flyway Migrations` |
+| **Distributed Concepts** | `Idempotent API Design`, `Pessimistic & Optimistic Locking`, `Transaction Isolation (ACID)`, `WebSocket / STOMP` |
+| **Cloud & DevOps** | `Docker (Multi-stage builds)`, `AWS (EC2, S3, RDS)`, `Oracle Cloud Infrastructure (OCI)`, `Linux CLI`, `Git`, `CI/CD` |
+| **Testing & Quality** | `JUnit 5`, `Mockito`, `Postman`, `Swagger / OpenAPI 3.0`, `Maven`, `Gradle` |
 
 ---
 
-## / selected-work
+## / technical-roadmap
 
-Some systems and repositories I've built and maintained:
-
-- **[Flight_Booking](https://github.com/Nikhilreddy810/Flight_Booking)** — Distributed seat allocation engine with pessimistic locking, Redis, and Swagger documentation.
-- **[User_Management](https://github.com/Nikhilreddy810/User_Management)** — Enterprise user CRUD service built on a 6-table normalized relational MySQL schema with JPA.
-- **[grid07-backend-assignment](https://github.com/Nikhilreddy810/grid07-backend-assignment)** — Spring Boot microservice featuring Redis atomic guardrails and notification batching.
-- **[portfolio](https://github.com/Nikhilreddy810/portfolio)** — Live engineering portfolio website showcasing system case studies, interactive filters, and architecture diagrams.
-
-*Check the pinned repositories above for full source code and setup guides.*
+```
+backend-foundations ──────► [ Core Java 21, Spring Boot 3.x, JPA/Hibernate, PostgreSQL ]
+        │
+        ▼
+distributed-state   ──────► [ Redis Caching, Idempotency Guards, Concurrency Locking ]
+        │
+        ▼
+messaging-tier      ──────► [ WebSocket/STOMP, Apache Kafka Event Streaming ]
+        │
+        ▼
+container-platform  ──────► [ Docker Multi-stage Builds, Containerized Deployments ]
+        │
+        ▼
+cloud-infrastructure─────► [ AWS (EC2/S3/RDS), Oracle Cloud Infrastructure (OCI) ]
+        │
+        ▼
+scalable-systems    ──────► [ Microservices Discovery, Distributed Tracing, High Availability ]
+```
 
 ---
 
 ## / engineering-log
 
-```
+```text
 [2022] Began B.Tech in Electronics & Communication at SVCE Tirupati (CGPA: 8.5 / 10)
 [2024] Architected User Management System with 6-table normalized relational schema
 [2025] Completed Data Analytics Internship at SmartBridge; built 3 Tableau dashboards
 [2025] Achieved Oracle Cloud Infrastructure (OCI) Foundations Associate Certification
-[2026] Architected Flight Booking System with pessimistic locking and Redis caching
-[2026] Shipped 100+ production REST APIs at DeepLure Research with Redis and Spring Boot
+[2026] Architected Flight Booking System with pessimistic locking, Redis, and transactional rollbacks
+[2026] Shipped 100+ production REST APIs at DeepLure Research with Redis, Razorpay, and Docker
 [2026] Extended Java Developer selections from Axlero Solutions & Infotact Solutions
-[2026] Expanding active focus into cloud-native microservices, Kafka, and Kubernetes
+[2026] Solved 100+ Data Structures & Algorithms problems on LeetCode
+[ACTIVE] Deepening distributed systems architecture, event-driven streaming, and cloud resiliency
 ```
 
 ---
 
-## / activity
+## / live-telemetry
 
-Recent engineering areas:
-- Production REST API development in Spring Boot & PostgreSQL
-- Concurrency control, Redis cache layers, and transactional idempotency
-- Cloud & DevOps infrastructure: Docker containerization and AWS foundations
-- LeetCode problem solving: 100+ Data Structures & Algorithms solved
+<div align="center">
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Nikhilreddy810&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="155" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilreddy810&layout=compact&theme=tokyonight&hide_border=true" height="155" alt="Top Languages" />
-</p>
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=Nikhilreddy810&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilreddy810&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+
+<br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nikhilreddy810/Nikhilreddy810/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nikhilreddy810/Nikhilreddy810/output/github-contribution-grid-snake.svg">
+  <img alt="GitHub contribution animation" src="https://raw.githubusercontent.com/Nikhilreddy810/Nikhilreddy810/output/github-contribution-grid-snake-dark.svg" width="95%">
+</picture>
+
+</div>
 
 ---
 
 ## / connect
 
-If you are working on backend systems, distributed architectures, or cloud infrastructure, feel free to connect:
+If you are working on backend engineering, distributed architectures, or high-concurrency systems, let's talk:
 
-- **Portfolio:** [https://nikhilreddy810.github.io/portfolio/](https://nikhilreddy810.github.io/portfolio/)
-- **LinkedIn:** [https://www.linkedin.com/in/nikhilreddylevaku/](https://www.linkedin.com/in/nikhilreddylevaku/)
-- **Email:** [levakunikhilreddy8@gmail.com](mailto:levakunikhilreddy8@gmail.com)
-- **GitHub:** [https://github.com/Nikhilreddy810](https://github.com/Nikhilreddy810)
-
----
+- 🌐 **Portfolio:** [nikhilreddy810.github.io/portfolio](https://nikhilreddy810.github.io/portfolio/)
+- 💼 **LinkedIn:** [linkedin.com/in/nikhilreddylevaku](https://www.linkedin.com/in/nikhilreddylevaku/)
+- 📬 **Email:** [levakunikhilreddy8@gmail.com](mailto:levakunikhilreddy8@gmail.com)
+- 🐙 **GitHub:** [github.com/Nikhilreddy810](https://github.com/Nikhilreddy810)
 
 <p align="center">
-  <code>build → learn → design → ship</code>
+  <code>architect → implement → optimize → scale</code>
 </p>

@@ -163,10 +163,14 @@ scalable-systems    ──────► [ Microservices Discovery, Distributed
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=Nikhilreddy810&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nikhilreddy810&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Nikhilreddy810&theme=tokyonight" alt="GitHub Profile Details" />
+<img height="180" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Nikhilreddy810&theme=tokyonight" alt="Top Languages by Commits" />
 
 <br/>
+
+<img width="95%" src="https://github-readme-streak-stats.herokuapp.com/?user=Nikhilreddy810&theme=tokyonight&hide_border=true" alt="GitHub Streak Stats" />
+
+<br/><br/>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nikhilreddy810/Nikhilreddy810/output/github-contribution-grid-snake-dark.svg">

@@ -155,7 +155,7 @@ Testing & Tools  │ JUnit 5, Mockito, Swagger OpenAPI 3.0, Postman, Maven, Grad
 2025  ───►  [ Cloud & Data  ] SmartBridge Data Intern (Tableau) • OCI Cloud Associate Certified
 2026  ───►  [ Concurrency   ] Built Flight Booking Engine (Pessimistic Locks & Redis Caching)
 2026  ───►  [ Production    ] Shipped 100+ production APIs at DeepLure Research (Razorpay + Redis)
-2026  ───►  [ Selections    ] Java Developer offers: Axlero Solutions & Infotact Solutions
+2026  ───►  [ Selections    ] Extended offers: Axlero Solutions, Infotact Solutions & Global Future Career
 NOW   ───►  [ Scale Focus   ] Distributed architectures, event streaming, and cloud resilience
 ```
 

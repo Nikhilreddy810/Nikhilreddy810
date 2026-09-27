@@ -98,17 +98,18 @@ Enforced with row-level pessimistic write locking (<code>PESSIMISTIC_WRITE</code
 <tr>
 <td>
 <b>DeepLure Research Platform</b><br/>
-<sub>Production B2B & On-Demand APIs</sub>
+<sub>Production B2B & On-Demand APIs (May 2026 – Aug 2026)</sub>
 </td>
 <td>
 <code>Java 21</code><br/>
 <code>PostgreSQL</code><br/>
-<code>Razorpay</code><br/>
-<code>Redis</code>
+<code>Redis</code><br/>
+<code>AWS S3</code><br/>
+<code>Razorpay</code>
 </td>
 <td>
-<b>Invariant: Strictly idempotent transactions &amp; low latency.</b><br/>
-Delivered 100+ production REST APIs. Razorpay webhooks protected with idempotency keys and locks. Redis async queues reduced DB query strain by <b>~40%</b>.
+<b>Invariant: Strictly idempotent transactions &amp; secure media pipeline.</b><br/>
+Delivered 100+ production REST APIs. Razorpay webhooks protected with idempotency keys and locks. AWS S3 storage pipeline with pre-signed URLs for secure media lifecycle. Redis async queues reduced DB load by <b>~40%</b>.
 </td>
 </tr>
 
@@ -141,7 +142,7 @@ Languages & Core │ Java (17/21), Core Java (Streams, Concurrency, OOP), SQL
 Frameworks       │ Spring Boot 3.x, Spring Security (JWT, RBAC), Spring Data JPA, Hibernate
 Data & Cache     │ PostgreSQL, MySQL, Redis (Cache-Aside, Async Queues), Flyway Migrations
 Systems Design   │ Concurrency Locks, Idempotency Primitives, ACID Isolation, WebSocket/STOMP
-Cloud & DevOps   │ Docker, AWS (EC2, S3, RDS), Oracle Cloud (OCI), Linux, Git, CI/CD
+Cloud & DevOps   │ AWS (IAM, EC2, S3, VPC, Auto Scaling), Docker, Linux, Networking, Git, CI/CD
 Testing & Tools  │ JUnit 5, Mockito, Swagger OpenAPI 3.0, Postman, Maven, Gradle
 ```
 

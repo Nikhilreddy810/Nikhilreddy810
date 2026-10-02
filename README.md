@@ -163,7 +163,7 @@ Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven
 2026  ───►  [ Concurrency   ] Built Flight Booking Engine (Pessimistic Locks & Redis Caching)
 2026  ───►  [ DevOps CI/CD  ] Automated GitHub Actions CI/CD pipeline & Docker Compose deploy to AWS EC2
 2026  ───►  [ Production    ] Shipped 100+ production APIs at DeepLure Research (Razorpay + Redis)
-2026  ───►  [ Selections    ] Extended offers: Axlero Solutions, Infotact Solutions & Global Future Career
+2026  ───►  [ Selections    ] Extended offers: Axlero Solutions, Infotact Solutions & Axonbloom Talent
 NOW   ───►  [ Scale Focus   ] Cloud infrastructure automation, event-driven architectures, and distributed systems
 ```
 

@@ -1,6 +1,6 @@
 # Nikhil Reddy Levaku
 
-**Java Backend Engineer • Distributed Systems • Concurrency & State Safety**
+**DevOps-Focused Backend Engineer • Cloud Infrastructure • Distributed Systems**
 
 [Portfolio](https://nikhilreddy810.github.io/portfolio/) &nbsp;•&nbsp; [LinkedIn](https://www.linkedin.com/in/nikhilreddylevaku/) &nbsp;•&nbsp; [Email](mailto:levakunikhilreddy8@gmail.com) &nbsp;•&nbsp; [Resume](https://nikhilreddy810.github.io/portfolio/resume.pdf)
 
@@ -10,11 +10,14 @@
 
 ```yaml
 engineer: "Nikhil Reddy Levaku"
-specialization: "High-Throughput Backend & Distributed State Safety"
-production_throughput: "100+ REST APIs shipped in Spring Boot"
-cache_efficiency: "40% database query offload via Redis"
+specialization: "DevOps & Cloud CI/CD • High-Throughput Java Backend"
+cicd_automation: "GitHub Actions: build, test, Docker Hub push, automated AWS EC2 deploy"
+containerization: "Docker & Docker Compose (Spring Boot, PostgreSQL, Redis)"
+cloud_infrastructure: "AWS (EC2, VPC, Security Groups, S3, EBS, IAM, Auto Scaling) & Linux"
+production_throughput: "100+ REST APIs delivered in Spring Boot across B2B platforms"
+cache_efficiency: "40% database query offload via Redis worker queues"
 concurrency_guarantee: "Pessimistic row locks + idempotency keys (Zero double-charges)"
-core_stack: [Java 21, Spring Boot 3.x, PostgreSQL, Redis, Docker, AWS]
+core_stack: [Java 21, Spring Boot 3.x, Docker, Docker Compose, GitHub Actions, AWS EC2, PostgreSQL, Redis]
 ```
 
 ---
@@ -73,25 +76,27 @@ How core engineering challenges were resolved across production and flagship pro
 <table>
 <tr>
 <th width="35%">Subsystem / Project</th>
-<th width="20%">Stack</th>
-<th width="45%">Technical Outcome & Invariant</th>
+<th width="25%">Stack</th>
+<th width="40%">Technical Outcome & Invariant</th>
 </tr>
 
 <tr>
 <td>
-<b>Flight Booking Engine</b><br/>
-<sub>Distributed Reservation Core</sub><br/>
+<b>Flight Booking Engine &amp; CI/CD</b><br/>
+<sub>Containerized Reservation Platform</sub><br/>
 <a href="https://github.com/Nikhilreddy810/Flight_Booking"><code>/Flight_Booking</code></a>
 </td>
 <td>
 <code>Spring Boot</code><br/>
-<code>MySQL</code><br/>
+<code>PostgreSQL</code><br/>
 <code>Redis</code><br/>
-<code>Docker</code>
+<code>Docker Compose</code><br/>
+<code>GitHub Actions</code><br/>
+<code>AWS EC2</code>
 </td>
 <td>
-<b>Invariant: No seat sold twice under parallel bursts.</b><br/>
-Enforced with row-level pessimistic write locking (<code>PESSIMISTIC_WRITE</code>) and transactional rollback on cancellation. Redis caching delivers sub-millisecond query returns.
+<b>Invariant: Automated zero-downtime deployment &amp; concurrency safety.</b><br/>
+Containerized with Docker Compose. Built a full GitHub Actions CI/CD pipeline (Gradle build/test, Docker Hub push, automated SSH deploy to AWS EC2 via <code>docker compose up -d</code>). Resolved Flyway MySQL syntax migration failure. Concurrency-safe seat reservation with pessimistic locks (<code>PESSIMISTIC_WRITE</code>) and transactional rollbacks.
 </td>
 </tr>
 
@@ -138,12 +143,13 @@ Modeled 6-table normalized schema with bidirectional JPA entity mappings, dynami
 ```
 LAYER              COMPONENTS
 ────────────────────────────────────────────────────────────────────────────────
-Languages & Core │ Java (17/21), Core Java (Streams, Concurrency, OOP), SQL
-Frameworks       │ Spring Boot 3.x, Spring Security (JWT, RBAC), Spring Data JPA, Hibernate
-Data & Cache     │ PostgreSQL, MySQL, Redis (Cache-Aside, Async Queues), Flyway Migrations
-Systems Design   │ Concurrency Locks, Idempotency Primitives, ACID Isolation, WebSocket/STOMP
-Cloud & DevOps   │ AWS (IAM, EC2, S3, VPC, Auto Scaling), Docker, Linux, Networking, Git, CI/CD
-Testing & Tools  │ JUnit 5, Mockito, Swagger OpenAPI 3.0, Postman, Maven, Gradle
+Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, Security Groups, S3, EBS, Auto Scaling)
+Containers & CI  │ Docker, Docker Compose, GitHub Actions (CI/CD), Docker Hub, Git
+Languages & Core │ Java, SQL, Core Java (Streams, Concurrency, OOP), Bash
+Frameworks       │ Spring Boot, Spring Security (JWT, RBAC), Spring Data JPA, Hibernate
+Databases & Cache│ PostgreSQL, MySQL, Redis (Cache-Aside, Async Queues), Flyway Migrations
+Systems Design   │ REST API Design, Concurrency Locks, Idempotency, Transaction Isolation (ACID)
+Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven
 ```
 
 ---
@@ -155,9 +161,10 @@ Testing & Tools  │ JUnit 5, Mockito, Swagger OpenAPI 3.0, Postman, Maven, Grad
 2024  ───►  [ Core Systems  ] Architected 6-table relational JPA Identity Microservice
 2025  ───►  [ Cloud & Data  ] SmartBridge Data Intern (Tableau) • OCI Cloud Associate Certified
 2026  ───►  [ Concurrency   ] Built Flight Booking Engine (Pessimistic Locks & Redis Caching)
+2026  ───►  [ DevOps CI/CD  ] Automated GitHub Actions CI/CD pipeline & Docker Compose deploy to AWS EC2
 2026  ───►  [ Production    ] Shipped 100+ production APIs at DeepLure Research (Razorpay + Redis)
 2026  ───►  [ Selections    ] Extended offers: Axlero Solutions, Infotact Solutions & Global Future Career
-NOW   ───►  [ Scale Focus   ] Distributed architectures, event streaming, and cloud resilience
+NOW   ───►  [ Scale Focus   ] Cloud infrastructure automation, event-driven architectures, and distributed systems
 ```
 
 ---

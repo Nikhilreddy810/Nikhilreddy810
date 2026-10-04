@@ -10,14 +10,16 @@
 
 ```yaml
 engineer: "Nikhil Reddy Levaku"
-specialization: "DevOps & Cloud CI/CD • High-Throughput Java Backend"
-cicd_automation: "GitHub Actions: build, test, Docker Hub push, automated AWS EC2 deploy"
-containerization: "Docker & Docker Compose (Spring Boot, PostgreSQL, Redis)"
+specialization: "DevOps & Cloud CI/CD • Microservices & Distributed Event Streaming"
+microservices_architecture: "4 decoupled services (Auth, Flight, Booking, Notification) with JWT inter-service auth"
+event_streaming: "Apache Kafka: async booking-created event publishing and consumption"
+cicd_automation: "GitHub Actions: build, test, multi-stage Docker builds, automated deployment"
+containerization: "Docker & Docker Compose (Spring Boot microservices, PostgreSQL, Redis, Kafka)"
 cloud_infrastructure: "AWS (EC2, VPC, Security Groups, S3, EBS, IAM, Auto Scaling) & Linux"
 production_throughput: "100+ REST APIs delivered in Spring Boot across B2B platforms"
 cache_efficiency: "40% database query offload via Redis worker queues"
 concurrency_guarantee: "Pessimistic row locks + idempotency keys (Zero double-charges)"
-core_stack: [Java 21, Spring Boot 3.x, Docker, Docker Compose, GitHub Actions, AWS EC2, PostgreSQL, Redis]
+core_stack: [Java 21, Spring Boot 3.x, Apache Kafka, PostgreSQL, Redis, Docker, GitHub Actions, AWS]
 ```
 
 ---
@@ -62,6 +64,14 @@ How core engineering challenges were resolved across production and flagship pro
                                                 │
                                                 ▼
                                  ┌─────────────────────────────┐
+                                 │   KAFKA EVENT STREAMING     │
+                                 │ • booking-created events    │
+                                 │ • Async Notification Service│
+                                 │ • Decoupled microservices   │
+                                 └──────────────┬──────────────┘
+                                                │
+                                                ▼
+                                 ┌─────────────────────────────┐
                                  │    PERSISTENCE & SCHEMAS    │
                                  │ • PostgreSQL / MySQL        │
                                  │ • Flyway version migrations │
@@ -82,21 +92,22 @@ How core engineering challenges were resolved across production and flagship pro
 
 <tr>
 <td>
-<b>Flight Booking Engine &amp; CI/CD</b><br/>
-<sub>Containerized Reservation Platform</sub><br/>
+<b>Flight Booking Microservices</b><br/>
+<sub>Decoupled Reservation &amp; Event Platform</sub><br/>
 <a href="https://github.com/Nikhilreddy810/Flight_Booking"><code>/Flight_Booking</code></a>
 </td>
 <td>
 <code>Spring Boot</code><br/>
+<code>Spring Security</code><br/>
 <code>PostgreSQL</code><br/>
 <code>Redis</code><br/>
-<code>Docker Compose</code><br/>
-<code>GitHub Actions</code><br/>
-<code>AWS EC2</code>
+<code>Apache Kafka</code><br/>
+<code>Docker</code><br/>
+<code>GitHub Actions</code>
 </td>
 <td>
-<b>Invariant: Automated zero-downtime deployment &amp; concurrency safety.</b><br/>
-Containerized with Docker Compose. Built a full GitHub Actions CI/CD pipeline (Gradle build/test, Docker Hub push, automated SSH deploy to AWS EC2 via <code>docker compose up -d</code>). Resolved Flyway MySQL syntax migration failure. Concurrency-safe seat reservation with pessimistic locks (<code>PESSIMISTIC_WRITE</code>) and transactional rollbacks.
+<b>Invariant: Zero-loss asynchronous messaging &amp; independent deployability.</b><br/>
+Refactored monolithic backend into 4 independently deployable microservices (Auth, Flight, Booking, Notification), each with dedicated PostgreSQL databases and Flyway migrations. Implemented REST inter-service communication forwarding JWTs for role enforcement. Built event-driven notification pipeline using Apache Kafka publishing <code>booking-created</code> events. Hardened with Jakarta Validation and automated GitHub Actions CI pipeline.
 </td>
 </tr>
 
@@ -143,13 +154,12 @@ Modeled 6-table normalized schema with bidirectional JPA entity mappings, dynami
 ```
 LAYER              COMPONENTS
 ────────────────────────────────────────────────────────────────────────────────
-Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, Security Groups, S3, EBS, Auto Scaling)
-Containers & CI  │ Docker, Docker Compose, GitHub Actions (CI/CD), Docker Hub, Git
 Languages & Core │ Java, SQL, Core Java (Streams, Concurrency, OOP), Bash
 Frameworks       │ Spring Boot, Spring Security (JWT, RBAC), Spring Data JPA, Hibernate
-Databases & Cache│ PostgreSQL, MySQL, Redis (Cache-Aside, Async Queues), Flyway Migrations
-Systems Design   │ REST API Design, Concurrency Locks, Idempotency, Transaction Isolation (ACID)
-Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven
+Databases & Queue│ PostgreSQL, MySQL, Redis (Cache & Queues), Apache Kafka, Flyway
+Systems Design   │ Microservices, Event-Driven Design, REST API Design, Concurrency Locks
+Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, Auto Scaling), Docker, CI/CD
+Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven, Git, GitHub
 ```
 
 ---

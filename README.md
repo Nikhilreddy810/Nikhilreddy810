@@ -16,11 +16,12 @@ event_streaming: "Apache Kafka: async booking-created event publishing and consu
 cicd_automation: "GitHub Actions: build, test, multi-stage Docker builds, automated deployment"
 containerization: "Docker & Docker Compose (10-service topology: Microservices, PostgreSQL, Redis, Kafka, Nginx)"
 reverse_proxy_ingress: "Nginx reverse proxy on port 80 with path routing & header forwarding"
+observability_stack: "Prometheus (15s scrape), Grafana (JVM/CPU/HTTP metrics), AWS CloudWatch, Actuator, SSH Tunneling"
 cloud_infrastructure: "AWS (EC2, VPC, Security Groups, S3, EBS, IAM, Auto Scaling) & Linux"
 production_throughput: "100+ REST APIs delivered in Spring Boot across B2B platforms"
 cache_efficiency: "40% database query offload via Redis worker queues"
 concurrency_guarantee: "Pessimistic row locks + idempotency keys (Zero double-charges)"
-core_stack: [Java 21, Spring Boot 3.x, Apache Kafka, Nginx, Docker, PostgreSQL, Redis, GitHub Actions, AWS]
+core_stack: [Java 21, Spring Boot 3.x, Apache Kafka, Nginx, Prometheus, Grafana, Docker, AWS, PostgreSQL, Redis]
 ```
 
 ---
@@ -105,11 +106,12 @@ How core engineering challenges were resolved across production and flagship pro
 <code>Apache Kafka</code><br/>
 <code>Nginx</code><br/>
 <code>Docker Compose</code><br/>
-<code>GitHub Actions</code>
+<code>Prometheus &amp; Grafana</code><br/>
+<code>AWS CloudWatch</code>
 </td>
 <td>
-<b>Invariant: Zero-loss asynchronous messaging &amp; independent deployability.</b><br/>
-Refactored monolithic backend into 4 independently deployable microservices (Auth, Flight, Booking, Notification), each with dedicated PostgreSQL databases and Flyway migrations. Orchestrated 10 containers via Docker Compose fronted by an <b>Nginx reverse proxy</b> on port 80 with path routing. Implemented REST inter-service communication forwarding JWTs and event-driven notification streaming via Apache Kafka (<code>booking-created</code> events). Hardened with Jakarta Validation and automated GitHub Actions CI pipeline.
+<b>Invariant: Zero-loss asynchronous messaging &amp; observable runtime state.</b><br/>
+Refactored monolithic backend into 4 independently deployable microservices (Auth, Flight, Booking, Notification), each with dedicated PostgreSQL databases and Flyway migrations. Orchestrated 10 containers via Docker Compose fronted by an <b>Nginx reverse proxy</b> on port 80. Implemented full observability stack: instrumented Spring Boot with <b>Actuator &amp; Micrometer</b>, scraped metrics via <b>Prometheus</b> (15s interval), verified EC2 host health with <b>AWS CloudWatch</b>, and designed interactive <b>Grafana dashboards</b> (JVM memory/GC, CPU, HTTP throughput/error rates) connected securely via SSH tunneling.
 </td>
 </tr>
 
@@ -161,7 +163,8 @@ Frameworks       │ Spring Boot, Spring Security (JWT, RBAC), Spring Data JPA, 
 Databases & Queue│ PostgreSQL, MySQL, Redis (Cache & Queues), Apache Kafka, Flyway
 Systems Design   │ Microservices, Event-Driven Design, REST API Design, Concurrency Locks
 Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, Auto Scaling), Docker, Docker Compose, Nginx, CI/CD
-Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven, Git, GitHub
+Observability    │ Prometheus, Grafana, AWS CloudWatch, Spring Boot Actuator, Micrometer, PromQL
+Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven, Git, GitHub, SSH Tunneling
 ```
 
 ---

@@ -164,7 +164,7 @@ Languages & Core │ Java, SQL, Core Java (Streams, Concurrency, OOP), Bash
 Frameworks       │ Spring Boot, Spring Security (JWT, RBAC), Spring Data JPA, Hibernate
 Databases & Queue│ PostgreSQL, MySQL, Redis (Cache & Queues), Apache Kafka, Flyway
 Systems Design   │ Microservices, Event-Driven Design, REST API Design, Concurrency Locks
-Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, Auto Scaling), Terraform (IaC), Docker, Docker Compose, Nginx, CI/CD
+Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, Auto Scaling), Terraform (IaC), Ansible, Chef, Docker, Docker Compose, Nginx, CI/CD
 Observability    │ Prometheus, Grafana, AWS CloudWatch, Spring Boot Actuator, Micrometer, PromQL
 Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven, Git, GitHub, SSH Tunneling
 ```

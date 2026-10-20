@@ -18,11 +18,11 @@ containerization: "Docker & Docker Compose (10-service topology: Microservices, 
 reverse_proxy_ingress: "Nginx reverse proxy on port 80 with path routing & header forwarding"
 observability_stack: "Prometheus (15s scrape), Grafana (JVM/CPU/HTTP metrics), AWS CloudWatch, Actuator, SSH Tunneling"
 cloud_infrastructure: "AWS (VPC, Subnets, IGW, Route Tables, EC2, Security Groups, S3, EBS, IAM) & Linux"
-infrastructure_as_code: "Terraform (modular AWS VPC, subnet, SG, and EC2 provisioning with user data)"
+infrastructure_as_code: "Terraform (modular AWS VPC, subnet, SG, EC2) & Configuration Management (Ansible, Chef)"
 production_throughput: "100+ REST APIs delivered in Spring Boot across B2B platforms"
 cache_efficiency: "40% database query offload via Redis worker queues"
 concurrency_guarantee: "Pessimistic row locks + idempotency keys (Zero double-charges)"
-core_stack: [Java 21, Spring Boot 3.x, Apache Kafka, Terraform, Nginx, Prometheus, Grafana, Docker, AWS, PostgreSQL, Redis]
+core_stack: [Java 21, Spring Boot 3.x, Apache Kafka, Terraform, Ansible, Chef, Nginx, Prometheus, Grafana, Docker, AWS, PostgreSQL, Redis]
 ```
 
 ---
@@ -108,12 +108,13 @@ How core engineering challenges were resolved across production and flagship pro
 <code>Nginx</code><br/>
 <code>Docker Compose</code><br/>
 <code>Terraform (IaC)</code><br/>
+<code>Ansible &amp; Chef</code><br/>
 <code>Prometheus &amp; Grafana</code><br/>
 <code>AWS CloudWatch</code>
 </td>
 <td>
 <b>Invariant: Zero-loss asynchronous messaging &amp; reproducible infrastructure.</b><br/>
-Refactored monolithic backend into 4 independently deployable microservices (Auth, Flight, Booking, Notification), each with dedicated PostgreSQL databases and Flyway migrations. Automated AWS cloud infrastructure provisioning using <b>Terraform (IaC)</b> (custom VPC, public subnet, IGW, route table, security group, and an encrypted gp3 EC2 instance with Docker/Git user data). Orchestrated 10 containers via Docker Compose fronted by an <b>Nginx reverse proxy</b> on port 80. Implemented full observability with <b>Spring Boot Actuator</b>, <b>Prometheus</b> (15s scrape interval), <b>AWS CloudWatch</b>, and interactive <b>Grafana dashboards</b> connected securely via SSH tunneling.
+Refactored monolithic backend into 4 independently deployable microservices (Auth, Flight, Booking, Notification), each with dedicated PostgreSQL databases and Flyway migrations. Automated AWS cloud infrastructure provisioning using <b>Terraform (IaC)</b> and remote host configuration with idempotent <b>Ansible playbooks</b> and <b>Chef recipes</b>. Orchestrated 10 containers via Docker Compose fronted by an <b>Nginx reverse proxy</b> on port 80. Implemented full observability with <b>Spring Boot Actuator</b>, <b>Prometheus</b> (15s scrape interval), <b>AWS CloudWatch</b>, and interactive <b>Grafana dashboards</b> connected securely via SSH tunneling.
 </td>
 </tr>
 

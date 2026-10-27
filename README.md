@@ -13,7 +13,7 @@ engineer: "Nikhil Reddy Levaku"
 specialization: "DevOps & Cloud CI/CD • Microservices & Distributed Event Streaming"
 microservices_architecture: "4 decoupled services (Auth, Flight, Booking, Notification) with JWT inter-service auth"
 event_streaming: "Apache Kafka: async booking-created event publishing and consumption"
-cicd_automation: "GitHub Actions & SonarQube: build, test, static quality gates, multi-stage Docker builds, automated deployment"
+cicd_automation: "Jenkins & GitHub Actions (CI/CD): Declarative/Scripted Pipelines, agent nodes, Jenkinsfile from SCM, SonarQube quality gates"
 containerization: "Docker & Docker Compose (10-service topology: Microservices, PostgreSQL, Redis, Kafka, Nginx)"
 reverse_proxy_ingress: "Nginx reverse proxy on port 80 with path routing & header forwarding"
 observability_stack: "Prometheus (15s scrape), Grafana (JVM/CPU/HTTP metrics), AWS CloudWatch, Actuator, SSH Tunneling"
@@ -22,7 +22,7 @@ infrastructure_as_code: "Terraform (modular AWS VPC, subnet, SG, EC2) & Configur
 production_throughput: "100+ REST APIs delivered in Spring Boot across B2B platforms"
 cache_efficiency: "40% database query offload via Redis worker queues"
 concurrency_guarantee: "Pessimistic row locks + idempotency keys (Zero double-charges)"
-core_stack: [Java 21, Spring Boot 3.x, Apache Kafka, Terraform, Ansible, Chef, SonarQube, Nginx, Prometheus, Grafana, Docker, AWS, PostgreSQL, Redis]
+core_stack: [Java 21, Spring Boot 3.x, Apache Kafka, Terraform, Ansible, Chef, Jenkins, SonarQube, Nginx, Prometheus, Grafana, Docker, AWS, PostgreSQL, Redis]
 ```
 
 ---
@@ -165,7 +165,7 @@ Languages & Core │ Java, SQL, Core Java (Streams, Concurrency, OOP), Bash
 Frameworks       │ Spring Boot, Spring Security (JWT, RBAC), Spring Data JPA, Hibernate
 Databases & Queue│ PostgreSQL, MySQL, Redis (Cache & Queues), Apache Kafka, Flyway
 Systems Design   │ Microservices, Event-Driven Design, REST API Design, Concurrency Locks
-Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, Auto Scaling), Terraform (IaC), Ansible, Chef, SonarQube, SonarScanner, Docker, Docker Compose, Nginx, CI/CD, Bash
+Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, Auto Scaling), Terraform (IaC), Ansible, Chef, Jenkins, SonarQube, SonarScanner, Docker, Docker Compose, Nginx, CI/CD, Bash
 Observability    │ Prometheus, Grafana, AWS CloudWatch, Spring Boot Actuator, Micrometer, PromQL
 Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven, Git, GitHub, SSH Tunneling
 ```

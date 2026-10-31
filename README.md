@@ -18,7 +18,7 @@ containerization: "Docker & Kubernetes (Pods, Deployments, ReplicaSets, Services
 reverse_proxy_ingress: "Nginx reverse proxy on port 80 with path routing & header forwarding"
 observability_stack: "Prometheus (15s scrape), Grafana (JVM/CPU/HTTP metrics), AWS CloudWatch, Actuator, SSH Tunneling"
 cloud_infrastructure: "AWS (VPC, Subnets, IGW, Route Tables, EC2, Security Groups, S3, EBS, IAM, ALB, Auto Scaling) & Linux"
-infrastructure_as_code: "Terraform (modular AWS VPC, subnet, SG, EC2) & Configuration Management (Ansible, Chef)"
+infrastructure_as_code: "Modular Terraform (IaC Modules, State, Variables/Outputs, tfvars) & Configuration Management (Ansible, Chef)"
 production_throughput: "100+ REST APIs delivered in Spring Boot across B2B platforms"
 cache_efficiency: "40% database query offload via Redis worker queues"
 concurrency_guarantee: "Pessimistic row locks + idempotency keys (Zero double-charges)"
@@ -165,7 +165,7 @@ Languages & Core │ Java, SQL, Core Java (Streams, Concurrency, OOP), Bash
 Frameworks       │ Spring Boot, Spring Security (JWT, RBAC), Spring Data JPA, Hibernate
 Databases & Queue│ PostgreSQL, MySQL, Redis (Cache & Queues), Apache Kafka, Flyway
 Systems Design   │ Microservices, Event-Driven Design, REST API Design, Concurrency Locks
-Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, ALB, Auto Scaling), Terraform (IaC), Ansible, Chef, Kubernetes, Docker, Docker Compose, Jenkins, SonarQube, SonarScanner, Nginx, CI/CD, Bash
+Cloud & DevOps   │ Linux, Networking, AWS (IAM, EC2, VPC, S3, EBS, ALB, Auto Scaling), Terraform (IaC Modules, State, tfvars), Ansible, Chef, Kubernetes, Docker, Docker Compose, Jenkins, SonarQube, SonarScanner, Nginx, CI/CD, Bash
 Observability    │ Prometheus, Grafana, AWS CloudWatch, Spring Boot Actuator, Micrometer, PromQL
 Testing & Tools  │ JUnit 5, Mockito, Swagger / OpenAPI, Postman, Gradle, Maven, Git, GitHub, SSH Tunneling
 ```

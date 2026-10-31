@@ -95,6 +95,27 @@ How core engineering challenges were resolved across production and flagship pro
 
 <tr>
 <td>
+<b>KubeHeal — AIOps SRE Operator</b><br/>
+<sub>Autonomous Kubernetes Self-Healing &amp; RCA</sub><br/>
+<a href="https://github.com/Nikhilreddy810/KubeHeal"><code>/KubeHeal</code></a>
+</td>
+<td>
+<code>Kubernetes</code><br/>
+<code>Helm 3</code><br/>
+<code>Python</code><br/>
+<code>Docker</code><br/>
+<code>Jenkins</code><br/>
+<code>Gemini API</code><br/>
+<code>RBAC</code>
+</td>
+<td>
+<b>Invariant: Closed-loop autonomous triage &amp; sub-second incident remediation.</b><br/>
+Built an autonomous SRE operator monitoring Kubernetes API event streams in real time. Triages pod crashes (`CrashLoopBackOff`, `OOMKilled`, `Error`) using an LLM SRE engine; automatically self-heals transient failures via graceful pod re-creations and deployment rollbacks, while compiling instant structured Root Cause Analysis (RCA) Markdown reports for complex application stack traces. Packaged and deployed via a production <b>Helm 3 Chart</b> and automated <b>Jenkins CI/CD Pipeline</b>.
+</td>
+</tr>
+
+<tr>
+<td>
 <b>Flight Booking Microservices</b><br/>
 <sub>Decoupled Reservation &amp; Event Platform</sub><br/>
 <a href="https://github.com/Nikhilreddy810/Flight_Booking"><code>/Flight_Booking</code></a>

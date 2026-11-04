@@ -2,7 +2,7 @@
 
 **DevOps-Focused Backend Engineer • Cloud Infrastructure • Distributed Systems**
 
-[Portfolio](https://nikhilreddy810.github.io/portfolio/) &nbsp;•&nbsp; [LinkedIn](https://www.linkedin.com/in/nikhilreddylevaku/) &nbsp;•&nbsp; [Email](mailto:levakunikhilreddy8@gmail.com) &nbsp;•&nbsp; [Resume](https://nikhilreddy810.github.io/portfolio/resume.pdf)
+[Portfolio](https://portfolio-virid-omega-5v2432jbg2.vercel.app/) &nbsp;•&nbsp; [LinkedIn](https://www.linkedin.com/in/nikhilreddylevaku/) &nbsp;•&nbsp; [Email](mailto:levakunikhilreddy8@gmail.com) &nbsp;•&nbsp; [Resume](https://portfolio-virid-omega-5v2432jbg2.vercel.app/resume.pdf)
 
 ---
 
@@ -233,7 +233,7 @@ NOW   ───►  [ Scale Focus   ] Cloud infrastructure automation, event-dri
 ## 📬 Connect
 
 ```text
-Portfolio  →  https://nikhilreddy810.github.io/portfolio/
+Portfolio  →  https://portfolio-virid-omega-5v2432jbg2.vercel.app/
 LinkedIn   →  https://www.linkedin.com/in/nikhilreddylevaku/
 GitHub     →  https://github.com/Nikhilreddy810
 Email      →  levakunikhilreddy8@gmail.com

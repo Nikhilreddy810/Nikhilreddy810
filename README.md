@@ -191,20 +191,6 @@ curl -X POST https://api.deeplure.com/v1/orders/checkout -H "X-Idempotency-Key: 
 
 ---
 
-### 🏆 Honors, Certifications & Milestones
-
-| Milestone / Recognition | Issuing Authority / Institution | Scope & Details |
-|:---|:---|:---|
-| 📜 **Oracle Cloud Infrastructure (OCI) Foundations Associate** | Oracle | Certified in cloud architecture, IAM, networking, compute & security |
-| 🌐 **CCNA: Switching, Routing, and Wireless Essentials** | Cisco Networking Academy | IP routing protocols, VLANs, switching mechanics & network topologies |
-| ☁️ **DevOps & Cloud Engineering Masterclass** | Professional Certification | Comprehensive mastery in Docker, Kubernetes, Terraform & CI/CD automation |
-| 💡 **Design Spark Challenge 2026** | RTIH (48-Hour Hackathon) | Engineered resilient Spring Boot backend for an LMS platform under tight deadlines |
-| 💼 **Multiple Campus Offers Extended** | Axlero • Infotact • Axonbloom | Selected across multiple software engineering drives for backend excellence |
-| 🎓 **B.Tech, Electronics & Communication** | SVCE Tirupati (2022 – 2026) | **CGPA: 8.5 / 10** • Strong foundation in discrete math, systems & algorithms |
-| 🧠 **100+ LeetCode DSA Problems Solved** | LeetCode | Mastered core problem patterns: Sliding Window, Trees, Graphs & Dynamic Programming |
-
----
-
 ### 🧠 Problem Solving & DSA Telemetry
 
 <div align="center">

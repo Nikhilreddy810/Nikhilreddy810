@@ -189,6 +189,22 @@ curl -X POST https://api.deeplure.com/v1/orders/checkout -H "X-Idempotency-Key: 
 | **Media Pipeline** | **AWS S3** pre-signed URL upload pipeline eliminating direct server payload bottlenecks |
 | **Performance Gain** | Tiered Redis caching offloaded database query throughput by **~40%** |
 
+<br/>
+
+#### 4. 🔐 [User Management System — Enterprise IAM & RBAC Platform](https://github.com/Nikhilreddy810/User_Management)
+
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=prod
+```
+
+| Dimension | Architectural Implementation Details |
+|:---|:---|
+| **Security Pipeline** | **Spring Security 6** & **JWT (RSA-256)** stateless filter chain with **BCrypt 12-round salted hashing** |
+| **RBAC Authorization** | Role-Based Access Control (`ROLE_ADMIN`, `ROLE_SRE`, `ROLE_USER`) with method-level `@PreAuthorize` |
+| **Data Schema** | **6-table normalized relational schema** in MySQL 8.0 with InnoDB transactional integrity |
+| **Token Invalidation** | Instant O(1) **Redis Token Blacklist** (`jti` TTL) for immediate session termination on logout |
+| **Repository** | [`github.com/Nikhilreddy810/User_Management`](https://github.com/Nikhilreddy810/User_Management) |
+
 ---
 
 ### 🧠 Problem Solving & DSA Telemetry

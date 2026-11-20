@@ -44,13 +44,13 @@ user@systems:~$ whoami --verbose
 name:            "Nikhil Reddy Levaku"
 specialization:  "DevOps-Focused Backend Engineer • Cloud Infrastructure • Distributed Systems"
 production_api:  "100+ REST APIs delivered across B2B platforms in Spring Boot & PostgreSQL"
-cloud_native:    "AWS (EC2, VPC, ALB, IAM, S3, EBS) • Kubernetes • Helm 3 • Docker Compose"
-orchestration:   "Autonomous SRE Operators (KubeHeal) • Pod Lifecycle Event Streaming • RCA Generation"
+cloud_native:    "AWS (Amazon EKS, ECS Fargate, ECR, EFS RWX, VPC, ALB, IAM) • Kubernetes • Docker"
+orchestration:   "Autonomous SRE Operators (KubeHeal) • HTTP/2 watch.Watch Stream • Exit 137 OOM Forensics"
+iac_and_config:  "Modular Terraform (AWS VPC, Subnets, EC2, S3/DynamoDB State Lock) • Ansible • Chef"
 concurrency:     "Pessimistic Row Locks + Redis SETNX Idempotency (Zero Double-Charges & Overbooking)"
 cache_efficiency:"40% database query offload via Redis tiered caching and async workers"
 messaging:       "Apache Kafka (Decoupled event publishing) • RabbitMQ worker queues"
-iac_and_config:  "Terraform IaC (Modular state, tfvars) • Ansible Playbooks • Chef Recipes"
-cicd_automation: "Jenkins (Declarative Pipelines) • GitHub Actions • Argo CD GitOps • SonarQube"
+cicd_automation: "Jenkins (Declarative Pipelines) • GitHub Actions • Argo CD GitOps • SonarQube • Trivy"
 academics:       "B.Tech in ECE, SVCE Tirupati (CGPA: 8.5 / 10 • Class of 2026)"
 extended_offers: ["Axlero Solutions", "Infotact Solutions", "Axonbloom Talent"]
 status:          "Architecting high-throughput distributed backends & automated cloud resilience"
@@ -93,8 +93,12 @@ status:          "Architecting high-throughput distributed backends & automated 
 #### ☁️ Cloud Infrastructure, Containers & Orchestration
 <p align="center">
   <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS" />
+  <img src="https://img.shields.io/badge/AWS_ECS_(Fargate)-FF9900?style=for-the-badge&logo=amazonecs&logoColor=white" alt="AWS ECS" />
+  <img src="https://img.shields.io/badge/Amazon_EKS-FF9900?style=for-the-badge&logo=amazoneks&logoColor=white" alt="Amazon EKS" />
+  <img src="https://img.shields.io/badge/Amazon_ECR-FF9900?style=for-the-badge&logo=amazonecr&logoColor=white" alt="Amazon ECR" />
+  <img src="https://img.shields.io/badge/AWS_EFS_(RWX)-FF9900?style=for-the-badge&logo=amazonefs&logoColor=white" alt="AWS EFS" />
   <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
-  <img src="https://img.shields.io/badge/Helm_3-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm" />
+  <img src="https://img.shields.io/badge/Helm_3-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm 3" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/Terraform_IaC-844FBA?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" />
   <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" />
@@ -102,15 +106,16 @@ status:          "Architecting high-throughput distributed backends & automated 
   <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx" />
 </p>
 
-#### 🔄 CI/CD Automation & Observability
+#### 🔄 CI/CD Automation, DevSecOps & Observability
 <p align="center">
-  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
   <img src="https://img.shields.io/badge/Argo_CD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white" alt="Argo CD" />
+  <img src="https://img.shields.io/badge/Trivy-1B365D?style=for-the-badge&logo=aquasec&logoColor=white" alt="Trivy" />
+  <img src="https://img.shields.io/badge/SonarQube-4E9BCD?style=for-the-badge&logo=sonarqube&logoColor=white" alt="SonarQube" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" alt="Jenkins" />
   <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" />
   <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
   <img src="https://img.shields.io/badge/CloudWatch-FF4F8B?style=for-the-badge&logo=amazoncloudwatch&logoColor=white" alt="AWS CloudWatch" />
-  <img src="https://img.shields.io/badge/SonarQube-4E9BCD?style=for-the-badge&logo=sonarqube&logoColor=white" alt="SonarQube" />
 </p>
 
 #### 🛠️ Developer Tooling & Verification
@@ -144,7 +149,21 @@ status:          "Architecting high-throughput distributed backends & automated 
 
 ### 🚀 Flagship Systems & Engineering Projects
 
-#### 1. 🛡️ [KubeHeal — Autonomous AIOps Kubernetes SRE Operator](https://github.com/Nikhilreddy810/KubeHeal)
+#### 1. 🛡️ [KubeHeal — Autonomous Kubernetes SRE Operator & GitOps Platform](https://github.com/Nikhilreddy810/KubeHeal)
+
+<p align="left">
+  <a href="https://github.com/Nikhilreddy810/KubeHeal">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github" alt="Repository" />
+  </a>
+  &nbsp;
+  <a href="https://medium.com/@nikhilreddylevaku/building-kubeheal-an-autonomous-kubernetes-sre-operator-with-python-and-argocd">
+    <img src="https://img.shields.io/badge/Medium-Read_Deep_Dive-black?style=flat-square&logo=medium" alt="Medium Article" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Nikhilreddy810/KubeHeal/blob/main/architecture_card.jpg">
+    <img src="https://img.shields.io/badge/Architecture-Blueprint_(16:9)-326CE5?style=flat-square&logo=diagramsdotnet" alt="Architecture Blueprint" />
+  </a>
+</p>
 
 ```bash
 helm repo add kubeheal https://nikhilreddy810.github.io/kubeheal && helm install kubeheal ./helm -n kubeheal-system
@@ -153,14 +172,41 @@ helm repo add kubeheal https://nikhilreddy810.github.io/kubeheal && helm install
 | Dimension | Architectural Implementation Details |
 |:---|:---|
 | **System Role** | Autonomous Kubernetes Controller replacing passive alerts with closed-loop self-healing |
-| **Core Engine** | Python 3.12, FastAPI, Kubernetes Client API, Gemini LLM SRE Triage Engine, RBAC |
-| **Remediation** | Intercepts APIServer event streams (`HTTP/2`), halts restart loops, triggers graceful pod rollbacks |
-| **Delivery** | Packaged as **Helm 3 Chart**, synchronized via **Argo CD**, automated by **Jenkins CI/CD** |
-| **Repository** | [`github.com/Nikhilreddy810/KubeHeal`](https://github.com/Nikhilreddy810/KubeHeal) |
+| **Core Engine** | Python 3.12, FastAPI, official Kubernetes API Client (`kubernetes.watch.Watch`), RBAC |
+| **Event Streaming** | Persistent HTTP/2 watch stream intercepting APIServer pod events (0s polling overhead) |
+| **Forensic Triage** | Isolates Linux kernel exit codes (`ExitCode: 137` OOMKilled, `ExitCode: 1` CrashLoopBackOff) via `previous=True` log capture |
+| **Remediation Loop** | Halts restart loops, executes dynamic memory tuning, and triggers declarative Helm 3 / Argo CD rollbacks |
+| **Documentation** | [Technical Deep Dive on Medium](https://medium.com/@nikhilreddylevaku/building-kubeheal-an-autonomous-kubernetes-sre-operator-with-python-and-argocd) • [Architecture Blueprint](https://github.com/Nikhilreddy810/KubeHeal/blob/main/architecture_card.jpg) • [`github.com/Nikhilreddy810/KubeHeal`](https://github.com/Nikhilreddy810/KubeHeal) |
 
 <br/>
 
-#### 2. ✈️ [Flight Booking Microservices Platform](https://github.com/Nikhilreddy810/Flight_Booking)
+#### 2. ☁️ [Cloud Container Infrastructure — Verified Production AWS Pipeline](https://github.com/Nikhilreddy810)
+
+```bash
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin $ECR_REGISTRY
+```
+
+| Dimension | Architectural Implementation Details |
+|:---|:---|
+| **Pipeline Workflow** | **Docker Buildx** ➔ **Amazon ECR** (Private Registry) ➔ **AWS ECS Fargate & Amazon EKS** ➔ **AWS EFS** |
+| **Amazon ECR** | Authenticated via STS IAM tokens, vulnerability scanning on push (`scanOnPush=true`), automated image digest tagging |
+| **AWS ECS (Fargate)** | Serverless task definitions with `awsvpc` network isolation, dedicated `ecsTaskExecutionRole`, and CloudWatch log drivers |
+| **Amazon EKS** | Multi-node production cluster pulling hardened container images directly from authenticated private ECR repositories |
+| **AWS EFS (RWX)** | Multi-AZ persistent shared storage mounted via EFS CSI Driver (`ReadWriteMany`), preventing EBS single-AZ multi-attach locks |
+
+<br/>
+
+#### 3. ✈️ [Flight Booking Microservices Platform](https://github.com/Nikhilreddy810/Flight_Booking)
+
+<p align="left">
+  <a href="https://github.com/Nikhilreddy810/Flight_Booking">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github" alt="Repository" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Nikhilreddy810/Flight_Booking/blob/main/architecture_card.jpg">
+    <img src="https://img.shields.io/badge/Architecture-Blueprint_(16:9)-FF9900?style=flat-square&logo=diagramsdotnet" alt="Architecture Blueprint" />
+  </a>
+</p>
 
 ```bash
 docker compose up -d --scale booking-service=3 --scale notification-service=2
@@ -168,15 +214,16 @@ docker compose up -d --scale booking-service=3 --scale notification-service=2
 
 | Dimension | Architectural Implementation Details |
 |:---|:---|
-| **Microservices** | 4 decoupled services (Auth, Flight, Booking, Notification) with dedicated PostgreSQL databases |
-| **Concurrency Guard** | `@Lock(LockModeType.PESSIMISTIC_WRITE)` with `@Transactional` rollback (Zero inventory drift) |
-| **Messaging & IaC** | **Apache Kafka** event streaming + modular **Terraform (AWS VPC, EC2, ALB)** + **Ansible** & **Chef** |
-| **Observability** | **Prometheus** (15s scrape interval), custom **Grafana dashboards**, Spring Actuator metrics |
+| **Microservices Mesh** | 4 decoupled services (Auth, Flight Search, Booking Coordinator, Notification Broker) with Database-per-Service |
+| **Terraform IaC** | Modular Terraform provisioning AWS VPC (public/private subnets across 2 AZs, NAT Gateway, ALB, EC2) |
+| **State Security** | Amazon S3 remote state storage with **DynamoDB state locking** (`LockID`) eliminating split-brain mutations |
+| **Concurrency Guard** | `@Lock(LockModeType.PESSIMISTIC_WRITE)` with `@Transactional` rollback guaranteeing zero overbooking |
+| **Event Streaming** | **Apache Kafka** cluster (4 partition topics) decoupling seat reservation from async ticket notification |
 | **Repository** | [`github.com/Nikhilreddy810/Flight_Booking`](https://github.com/Nikhilreddy810/Flight_Booking) |
 
 <br/>
 
-#### 3. 🌐 [DeepLure Production API Platform — B2B Backend](https://portfolio-virid-omega-5v2432jbg2.vercel.app/)
+#### 4. 🌐 [DeepLure Production API Platform — B2B Backend](https://portfolio-virid-omega-5v2432jbg2.vercel.app/)
 
 ```bash
 curl -X POST https://api.deeplure.com/v1/orders/checkout -H "X-Idempotency-Key: a4f8b2c9..." -H "Authorization: Bearer <TOKEN>"
@@ -191,7 +238,17 @@ curl -X POST https://api.deeplure.com/v1/orders/checkout -H "X-Idempotency-Key: 
 
 <br/>
 
-#### 4. 🔐 [User Management System — Enterprise IAM & RBAC Platform](https://github.com/Nikhilreddy810/User_Management)
+#### 5. 🔐 [User Management System — Enterprise IAM & RBAC Platform](https://github.com/Nikhilreddy810/User_Management)
+
+<p align="left">
+  <a href="https://github.com/Nikhilreddy810/User_Management">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github" alt="Repository" />
+  </a>
+  &nbsp;
+  <a href="https://github.com/Nikhilreddy810/User_Management/blob/main/architecture_card.jpg">
+    <img src="https://img.shields.io/badge/Architecture-Blueprint_(16:9)-009639?style=flat-square&logo=diagramsdotnet" alt="Architecture Blueprint" />
+  </a>
+</p>
 
 ```bash
 mvn spring-boot:run -Dspring-boot.run.profiles=prod
@@ -224,9 +281,9 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 
 ### 🎯 Currently Building & Active Focus
 
-* ☁️ **Cloud Container Infrastructure**: Deploying and scaling microservices across **Amazon EKS**, **AWS ECS (Fargate)**, container registries via **ECR**, and persistent shared storage via **AWS EFS**.
+* 🚀 **Cloud Container Infrastructure [SHIPPED / VERIFIED HANDS-ON]**: Verified production AWS container pipeline — **Amazon ECR** (`scanOnPush=true`), serverless **AWS ECS (Fargate)** with `awsvpc` & IAM roles, **Amazon EKS** multi-node orchestration, and **AWS EFS** multi-AZ persistent shared storage (`ReadWriteMany` — RWX) eliminating EBS volume multi-attach locks.
 * 🛡️ **DevSecOps & Pipeline Hardening**: Embedding container security scanning via **Trivy**, static analysis via **SonarQube**, and enforcing non-root least-privilege Docker runtime policies.
-* 🤖 **Kubernetes SRE & Observability**: Cluster troubleshooting across production failure states backed by **Prometheus metrics**, **Grafana alerts**, and autonomous self-healing operators.
+* 🤖 **Autonomous SRE & Observability**: Real-time Kubernetes event streaming (`watch.Watch`), exit code forensics (`ExitCode: 137` OOMKilled), and automated Root Cause Analysis (RCA) reporting.
 
 ---
 

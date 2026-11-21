@@ -135,15 +135,29 @@ status:          "Architecting high-throughput distributed backends & automated 
 
 ### 💼 Work Experience Log
 
-* **DeepLure Research Pvt Ltd** — *Backend Engineer Intern* `[May 2026 – Aug 2026]`
+* **DeepLure Research Pvt Ltd** — *Backend & Cloud Engineer* `[May 2026 – Aug 2026]`
   * Shipped **100+ production REST APIs** in Spring Boot across B2B marketplace and on-demand platforms.
   * Secured services with stateless JWT & RBAC; integrated Razorpay with Redis idempotency keys and pessimistic locking to eliminate double billing under peak concurrency.
   * Engineered Redis asynchronous workers and caching, reducing database load by **~40%**.
-  * Modeled normalized PostgreSQL schemas with Flyway versioned migrations and JUnit 5 / Mockito test coverage.
+  * Configured **AWS S3** and **OVH object-storage** buckets for resilient media asset persistence; diagnosed production defects using centralized **Graylog** log aggregation.
+  * Containerized microservices with multi-stage Docker builds and built automated CI/CD workflows using GitHub Actions.
+  * Modeled normalized PostgreSQL schemas with Flyway versioned migrations and Hibernate/JPA entity relationships with JUnit 5 / Mockito unit & integration tests.
 
 * **APSCHE / SmartBridge** — *Cloud & Data Analytics Intern* `[May 2025 – Jul 2025]`
   * Analyzed and transformed sales datasets with SQL; built 3 production Tableau operational dashboards.
   * Earned official **Oracle Cloud Infrastructure (OCI) Foundations Associate** certification.
+
+---
+
+### 📜 Verified Certifications & Credentials
+
+| Credential | Issuing Organization | Verification Date |
+|:---|:---|:---|
+| **AWS Cloud Practitioner (CLF-C02) Official Practice** | AWS Training & Certification | Nov 2025 |
+| **Oracle Cloud Infrastructure Foundations Associate (1Z0-1085-25)** | Oracle University | Jul 2025 |
+| **DevOps Basics for Everyone** | IBM | May 2024 |
+| **Software Engineer Intern** | HackerRank | Apr 2026 |
+| **Problem Solving (Intermediate)** | HackerRank | Nov 2025 |
 
 ---
 

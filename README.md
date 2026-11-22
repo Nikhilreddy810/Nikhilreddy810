@@ -298,6 +298,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 * 🚀 **Cloud Container Infrastructure [SHIPPED / VERIFIED HANDS-ON]**: Verified production AWS container pipeline — **Amazon ECR** (`scanOnPush=true`), serverless **AWS ECS (Fargate)** with `awsvpc` & IAM roles, **Amazon EKS** multi-node orchestration, and **AWS EFS** multi-AZ persistent shared storage (`ReadWriteMany` — RWX) eliminating EBS volume multi-attach locks.
 * 🛡️ **DevSecOps & Pipeline Hardening**: Embedding container security scanning via **Trivy**, static analysis via **SonarQube**, and enforcing non-root least-privilege Docker runtime policies.
 * 🤖 **Autonomous SRE & Observability**: Real-time Kubernetes event streaming (`watch.Watch`), exit code forensics (`ExitCode: 137` OOMKilled), and automated Root Cause Analysis (RCA) reporting.
+* ⚡ **Performance & Cloud Reliability Engineering**: Distributed caching architectures with Redis, zero-downtime rolling deployments on Kubernetes, and high-throughput connection pool optimization with HikariCP.
 
 ---
 

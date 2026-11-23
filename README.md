@@ -96,6 +96,7 @@ status:          "Architecting high-throughput distributed backends & automated 
   <img src="https://img.shields.io/badge/AWS_ECS_(Fargate)-FF9900?style=for-the-badge&logo=amazonecs&logoColor=white" alt="AWS ECS" />
   <img src="https://img.shields.io/badge/Amazon_EKS-FF9900?style=for-the-badge&logo=amazoneks&logoColor=white" alt="Amazon EKS" />
   <img src="https://img.shields.io/badge/Amazon_ECR-FF9900?style=for-the-badge&logo=amazonecr&logoColor=white" alt="Amazon ECR" />
+  <img src="https://img.shields.io/badge/Amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white" alt="Amazon S3" />
   <img src="https://img.shields.io/badge/AWS_EFS_(RWX)-FF9900?style=for-the-badge&logo=amazonefs&logoColor=white" alt="AWS EFS" />
   <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes" />
   <img src="https://img.shields.io/badge/Helm_3-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm 3" />
@@ -116,6 +117,7 @@ status:          "Architecting high-throughput distributed backends & automated 
   <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus" />
   <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
   <img src="https://img.shields.io/badge/CloudWatch-FF4F8B?style=for-the-badge&logo=amazoncloudwatch&logoColor=white" alt="AWS CloudWatch" />
+  <img src="https://img.shields.io/badge/Graylog-FF3C00?style=for-the-badge&logo=graylog&logoColor=white" alt="Graylog" />
 </p>
 
 #### 🛠️ Developer Tooling & Verification

@@ -20,6 +20,10 @@
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
+  <a href="https://medium.com/@nikhilreddylevaku">
+    <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
+  </a>
+  &nbsp;
   <a href="https://portfolio-virid-omega-5v2432jbg2.vercel.app/resume.pdf">
     <img src="https://img.shields.io/badge/Resume-4285F4?style=for-the-badge&logo=googledocs&logoColor=white" alt="Resume" />
   </a>
@@ -124,6 +128,7 @@ status:          "Architecting high-throughput distributed backends & automated 
 <p align="center">
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/OpenAPI_/_Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" alt="OpenAPI" />
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
   <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" alt="Gradle" />
   <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven" />
@@ -345,6 +350,10 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
   &nbsp;
   <a href="https://www.linkedin.com/in/nikhilreddylevaku/">
     <img src="https://img.shields.io/badge/LinkedIn_Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="https://medium.com/@nikhilreddylevaku">
+    <img src="https://img.shields.io/badge/Medium_Articles-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium" />
   </a>
   &nbsp;
   <a href="mailto:levakunikhilreddy8@gmail.com">
